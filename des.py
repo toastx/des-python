@@ -93,6 +93,8 @@ def encryption(user_input):
         new_rpt = [str(int(lpt_list[i]) ^ int(p_box_res[i])) for i in range(32)]
         lpt = rpt
         rpt = ''.join(new_rpt)
+        print(lpt)
+        print(rpt)
     
     tmp = rpt + lpt
     cipher = [tmp[const.ip_inverse_table[i] - 1] for i in range(64)]
@@ -130,6 +132,8 @@ def decryption(final_cipher):
         new_rpt = [str(int(lpt_list[i]) ^ int(p_box_res[i])) for i in range(32)]
         lpt = rpt
         rpt = ''.join(new_rpt)
+        print(lpt)
+        print(rpt)
     
     tmp = rpt + lpt
     cipher = [tmp[const.ip_inverse_table[i] - 1] for i in range(64)]
