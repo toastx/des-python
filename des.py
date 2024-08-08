@@ -33,7 +33,7 @@ def ip_func(text):
 
 
     ip_res = ''.join(ip_result)
-    
+    print(f"ip res : {ip_res}")
     return ip_res
 
 
@@ -93,8 +93,8 @@ def encryption(user_input):
         new_rpt = [str(int(lpt_list[i]) ^ int(p_box_res[i])) for i in range(32)]
         lpt = rpt
         rpt = ''.join(new_rpt)
-        print(lpt)
-        print(rpt)
+        print(f"{num+1} lpt:{lpt}")
+        print(f"{num+1} rpt:{rpt}")
     
     tmp = rpt + lpt
     cipher = [tmp[const.ip_inverse_table[i] - 1] for i in range(64)]
@@ -132,8 +132,8 @@ def decryption(final_cipher):
         new_rpt = [str(int(lpt_list[i]) ^ int(p_box_res[i])) for i in range(32)]
         lpt = rpt
         rpt = ''.join(new_rpt)
-        print(lpt)
-        print(rpt)
+        print(f"{num+1} lpt:{lpt}")
+        print(f"{num+1} rpt:{rpt}")
     
     tmp = rpt + lpt
     cipher = [tmp[const.ip_inverse_table[i] - 1] for i in range(64)]
